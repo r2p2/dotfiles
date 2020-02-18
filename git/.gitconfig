@@ -1,0 +1,25 @@
+[user]
+	email = robert.peters@fabmatics.com
+	name = Robert Peters
+	signingkey = 0778ACB13BB48D08
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = gpg2
+
+[core]
+	excludesfile = ~/.mygitignore
+
+[gui]
+	warndetachedcommit = true
+	tabsize = 4
+[alias]
+	logg = log --oneline --graph --decorate
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
