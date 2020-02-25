@@ -11,6 +11,7 @@ Plug 'dstein64/vim-startuptime'
 Plug 'liuchengxu/vim-which-key'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'lifepillar/vim-solarized8'
 Plug 'APZelos/blamer.nvim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
@@ -26,7 +27,8 @@ set scrolloff=999
 set cursorline
 set lazyredraw
 set background=light
-colorscheme gruvbox8_soft
+"colorscheme gruvbox8_soft
+colorscheme solarized8
 
 "" backup
 
