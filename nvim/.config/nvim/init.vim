@@ -1,21 +1,22 @@
 call plug#begin('~/.vim/plugged')
-Plug 'rhysd/vim-clang-format'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'derekwyatt/vim-fswitch'
+Plug 'APZelos/blamer.nvim'
+Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'liuchengxu/vim-clap'
 Plug 'liuchengxu/vista.vim'
 Plug 'anekos/hledger-vim'
-Plug 'dstein64/vim-startuptime'
-Plug 'liuchengxu/vim-which-key'
-Plug 'derekwyatt/vim-fswitch'
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'lifepillar/vim-solarized8'
-Plug 'APZelos/blamer.nvim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'itchyny/lightline.vim'
+Plug 'jceb/vim-orgmode'
 Plug 'vimwiki/vimwiki'
+Plug 'dstein64/vim-startuptime'
+Plug 'KaraMCC/vim-streamline'
+Plug 'liuchengxu/vim-which-key'
+Plug 'lifepillar/vim-solarized8'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 "" misc
@@ -27,7 +28,6 @@ set scrolloff=999
 set cursorline
 set lazyredraw
 set background=light
-"colorscheme gruvbox8_soft
 colorscheme solarized8
 
 "" backup
@@ -108,8 +108,14 @@ let g:netrw_altv = 1
 let g:netrw_sort_options = "i"
 let g:netrw_sort_sequence = '[\/]$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$'
 
-" Base16
-let base16colorspace=256  " Access colors present in 256 colorspace
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 
 " hledger
 autocmd FileType hledger setlocal omnifunc=hledger#complete#omnifunc
